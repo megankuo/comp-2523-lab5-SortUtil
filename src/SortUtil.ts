@@ -1,4 +1,4 @@
-import { ISortable } from "./ISortable";
+import { ISortable } from './ISortable';
 
 export class SortUtil {
   collection: ISortable;
@@ -15,7 +15,9 @@ export class SortUtil {
       isSorted = true;
       for (let i = 0; i < lastUnsorted; i++) {
         if (this.collection.compare(i, i + 1)) {
+          // this.collection.compare(this.collection[i], this.collection[i + 1])
           this.collection.swap(i, i + 1);
+          console.log('Hello world ' + i);
           isSorted = false;
         }
       }

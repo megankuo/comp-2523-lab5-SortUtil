@@ -5,17 +5,26 @@ export class NumberGroup implements ISortable {
     this.data = data;
   }
 
-  data: number[];
+  data: number[]; // [30, 3, -15, 0]
 
   get length(): number {
-    // logic here
-  };
+    return this.data.length;
+  }
 
   compare(leftPos: number, rightPos: number): boolean {
-    // logic here
+    if (this.data[leftPos] > this.data[rightPos]) {
+      // (leftPos > rightPos)
+      console.log('compare true');
+      return true;
+    } else {
+      console.log('compare false');
+      return false;
+    }
   }
 
   swap(left: number, right: number): void {
-    // logic here
+    let tempLeft = this.data[left];
+    this.data[left] = this.data[right];
+    this.data[right] = tempLeft;
   }
 }
