@@ -15,10 +15,9 @@ export class SortUtil {
       isSorted = true;
       for (let i = 0; i < lastUnsorted; i++) {
         if (this.collection.compare(i, i + 1)) {
-          // this.collection.compare(this.collection[i], this.collection[i + 1])
           this.collection.swap(i, i + 1);
-          console.log('Hello world ' + i);
           isSorted = false;
+          // console.log(i + ' compared to ' + (i + 1));
         }
       }
     }

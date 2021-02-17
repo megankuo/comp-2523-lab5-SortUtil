@@ -12,14 +12,7 @@ export class NumberGroup implements ISortable {
   }
 
   compare(leftPos: number, rightPos: number): boolean {
-    if (this.data[leftPos] > this.data[rightPos]) {
-      // (leftPos > rightPos)
-      console.log('compare true');
-      return true;
-    } else {
-      console.log('compare false');
-      return false;
-    }
+    return this.data[leftPos] > this.data[rightPos];
   }
 
   swap(left: number, right: number): void {

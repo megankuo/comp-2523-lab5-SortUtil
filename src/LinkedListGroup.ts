@@ -47,7 +47,7 @@ export class LinkedListGroup implements ISortable {
   }
 
   compare(leftPos: number, rightPos: number): boolean {
-    // Implement this part yourself
+    //
   }
 
   swap(leftPos: number, rightPos: number): void {

@@ -8,14 +8,19 @@ export class CharacterGroup implements ISortable {
   data: string;
 
   get length(): number {
-    // logic here
+    return this.data.length;
   }
 
   compare(leftPos: number, rightPos: number): boolean {
-    // logic here
+    const stringArray = this.data.toLowerCase().split('');
+    return stringArray[leftPos] > stringArray[rightPos];
   }
 
   swap(left: number, right: number): void {
-    // logic here
+    let tempArray = this.data.split('');
+    let tempLeft = tempArray[left];
+    tempArray[left] = tempArray[right];
+    tempArray[right] = tempLeft;
+    this.data = tempArray.join('');
   }
 }
