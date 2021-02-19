@@ -5,7 +5,7 @@ export class NumberGroup implements ISortable {
     this.data = data;
   }
 
-  data: number[]; // [30, 3, -15, 0]
+  data: number[];
 
   get length(): number {
     return this.data.length;
